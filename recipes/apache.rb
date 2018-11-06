@@ -17,13 +17,11 @@
 # limitations under the License.
 #
 
-include_recipe "php"
+
 
 # On Windows PHP comes with the MySQL Module and we use IIS on Windows
 unless platform? "windows"
 include_recipe "apache2"
-include_recipe "mysql::client"
-include_recipe "mysql::server"
 include_recipe "php"
 include_recipe "mysql"
 include_recipe "apache2::mod_php5"
