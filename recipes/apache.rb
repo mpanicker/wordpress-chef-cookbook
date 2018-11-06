@@ -20,14 +20,14 @@
 
 
 # On Windows PHP comes with the MySQL Module and we use IIS on Windows
-unless platform? "windows"
-include_recipe "apache2"
-include_recipe "php"
-include_recipe "mysql"
-include_recipe "apache2::mod_php5"
-include_recipe "mysql::ruby"
+#unless platform? "windows"
+#include_recipe "apache2"
+#include_recipe "php"
+#include_recipe "php::module_mysql"
+#include_recipe "apache2::mod_php5"
+#include_recipe "mysql::ruby"
 
-end
+#end
 
 include_recipe "wordpress::app"
 
